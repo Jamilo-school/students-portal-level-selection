@@ -52,7 +52,7 @@ display: grid;
   padding: 5px;
   border-radius: 6px;
   font-family: monospace;
-  
+
 
 }
 .Nemis{
@@ -69,7 +69,7 @@ padding-bottom: 3px;
 color: rgb(33, 158, 158);
 background:#ECFDF5;
 border-radius: 4px;
-scrollbar-highlight-color: #0de5da;
+
 
 }
 
@@ -116,6 +116,7 @@ padding-right: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
+ 
 }
 
 .form {
@@ -130,6 +131,7 @@ padding-right: 5px;
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  
 }
 
 .contact-form {
@@ -455,25 +457,13 @@ textarea.input {
 
 
 
-@media (min-width: 480px) {
+@media (max-width: 480px) {
   .form,.info{
     grid-template-columns: 1fr;
-   
-    
-    
   }
   .container {
     padding: 1.5rem;
-
-   
   }
-  .information{
-    max-width: 83%;
-  }
-  .title{
-    max-width: 83%;
-  }
-
 
   .contact-info:before {
     display: none;
@@ -483,11 +473,11 @@ textarea.input {
   .big-circle {
     display: none;
   }
+  
 
   form,
   .contact-info {
     padding: 1.7rem 1.6rem;
-  
   }
 
   .text,
