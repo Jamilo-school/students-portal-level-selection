@@ -28,7 +28,7 @@ details{
  
 }
 .pictures{
-  width: 80%;
+  width: 100%;
   height: 100%;
   border-radius: 4px;padding-bottom: 5px;
 }
@@ -51,7 +51,8 @@ display: grid;
   border: 4px solid #ffff;
   padding: 5px;
   border-radius: 6px;
-  font-family: monospace;z
+  font-family: monospace;
+
 
 }
 .Nemis{
@@ -68,7 +69,7 @@ padding-bottom: 3px;
 color: rgb(33, 158, 158);
 background:#ECFDF5;
 border-radius: 4px;
-scrollbar-highlight-color: #0de5da;
+
 
 }
 
@@ -115,6 +116,7 @@ padding-right: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
+ 
 }
 
 .form {
@@ -129,6 +131,7 @@ padding-right: 5px;
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  
 }
 
 .contact-form {
@@ -469,6 +472,12 @@ textarea.input {
   .square,
   .big-circle {
     display: none;
+  }
+  .information{
+    max-width: 80%;
+  }
+  .title{
+    max-width: 80%;
   }
 
   form,
