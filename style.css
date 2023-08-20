@@ -341,9 +341,8 @@ textarea.input {
 
    
   }
-  #btnsforlevels{
-    font-size: 13px;
-    padding-left: 8px;
+  a{
+    margin: 2px;
   }
 
   /* ////////////////////////////////////// */
@@ -428,19 +427,4 @@ textarea.input {
     padding: 0.45rem 1.2rem;
   }
 }
-@media (min-width: 462px) {
-  
-  .information, #displayforlongclassnames {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    margin: 0.7rem 0;
-    align-items: left;
 
-   
-  }
-  #btnsforlevels{
-    font-size: 13px;
-    padding-left: 8px;
-  }
-
-}
