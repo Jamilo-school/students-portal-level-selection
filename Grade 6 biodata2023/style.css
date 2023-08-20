@@ -473,12 +473,7 @@ textarea.input {
   .big-circle {
     display: none;
   }
-  .information{
-    max-width: 86%;
-  }
-  .title{
-    max-width: 83%;
-  }
+
 
   form,
   .contact-info {

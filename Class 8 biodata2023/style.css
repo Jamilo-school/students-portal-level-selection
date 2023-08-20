@@ -473,13 +473,7 @@ textarea.input {
   .big-circle {
     display: none;
   }
-  .information{
-    max-width: 86%;
-  }
-  .title{
-    max-width: 83%;
-  }
-
+ 
   form,
   .contact-info {
     padding: 1.7rem 1.6rem;
