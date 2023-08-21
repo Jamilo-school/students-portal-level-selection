@@ -141,11 +141,12 @@ padding-right: 5px;
   padding: 44px;
 }
 .logoinmicrosoft{
-  width: 30%;
+  border-radius: 6px;
+  width: 25%;
   position: fixed;
-  right: 30px;
+  right: 10px;
   top: 15px;
-  height: 20%;
+  height: 30%;
 }
 
 .form .title {
