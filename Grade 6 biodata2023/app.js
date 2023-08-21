@@ -92,7 +92,7 @@ formContainers.forEach((container) => {
       }, 2000);
     } else {
       // Display error message
-      errorDiv.textContent = 'Invalid email. Please enter a valid email address.';
+      errorDiv.textContent = 'Invalid key. Please enter a valid Authentication key.';
     }
   });
 });

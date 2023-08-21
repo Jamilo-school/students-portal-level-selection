@@ -135,10 +135,11 @@ padding-right: 5px;
 /*Scale only to make it look right on the preview*/
   scale: 0.8;
   background-color: #ffffff;
-  height: 280px;
+  height: 290px;
   width: 352px;
   box-sizing: content-box;
   padding: 44px;
+  transition-timing-function: ease-in;
 }
 .logoinmicrosoft{
   border-radius: 6px;
@@ -146,12 +147,14 @@ padding-right: 5px;
   position: fixed;
   right: 2cqb;
   top: 15px;
+  height: 10%;
  
 }
 
 .form .title {
+  font-weight: bold;
   color: #1b1b1b;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   font-weight: 600;
   padding: 0;
   margin-top: 16px;
