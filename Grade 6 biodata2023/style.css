@@ -136,10 +136,11 @@ padding-right: 5px;
   scale: 0.8;
   background-color: #ffffff;
   height: 290px;
-  width: 352px;
+  width: 300px;
   box-sizing: content-box;
   padding: 44px;
   transition-timing-function: ease-in;
+
 }
 .logoinmicrosoft{
   border-radius: 6px;
@@ -236,6 +237,21 @@ padding-right: 5px;
 .form .button_row .primary_button:hover {
   background-color: #005da6;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ////////////////////////////////// */
 
 .container {
@@ -395,7 +411,7 @@ textarea.input {
   background: linear-gradient(45deg,#cbd1d1,#a83a85,#581bc2,#000000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-    border: 4px ;
+
 }
 
 .input-container span {
