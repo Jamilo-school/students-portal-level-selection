@@ -16,6 +16,7 @@ inputs.forEach((input) => {
   input.addEventListener("focus", focusFunc);
   input.addEventListener("blur", blurFunc);
 });
+ // start of JavaScript code for generating notifications in order
 
 var notifications = [
   "Other  class details .",
