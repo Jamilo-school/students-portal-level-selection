@@ -457,6 +457,7 @@ textarea.input {
 
 
 
+
 @media (max-width: 480px) {
   .form,.info{
     grid-template-columns: 1fr;
