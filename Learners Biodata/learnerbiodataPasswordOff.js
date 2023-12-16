@@ -1,16 +1,23 @@
 const learners = {
     ClassEight2023: [
       { 
-        Name: "learner not selected", 
-        AdmNo: "learner not selected", 
-        Index: "learner not selected", 
-        UPI: "learner not selected",  
-        imageUrl: "selection", 
-        Status: "learner not selected", 
-        fileURL: "./Pdf/slip2023/ClementJoseph.pdf", 
+        Name: "Edward Benard Abeka",
+       AcademicAbility:"Above Average", 
+        Gender: "Male", 
+        AdmNo: "23/001", 
+        Index: "39701064001",
+        UPI: "F2AJ5A1",  
+        Character: "Excellent",  
+        GraduationYear:"2023", 
+        Father:"SETH OTIENO ABEKA.", 
+        Tel:"+254-729-246-853", 
+        Mother:"EVELYN AKINYI ABEKA", 
+        imageUrl: "./img/abeka.jpg",
+        fileURL: "./Pdf/slip 2023/Abeka.pdf",
         fileURL2: "./Pdf/slip2023/ClementJoseph.pdf", 
-        fileURL3: "./Pdf/slip2023/ClementJoseph.pdf"
-      },
+        fileURL3: "./Pdf/slip2023/ClementJoseph.pdf",
+        password: "ass"
+        },
       // Other learner objects without passwords
     ],
     GradeSeven: [
