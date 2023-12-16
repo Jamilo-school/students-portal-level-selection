@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 1px;
   background-color: #f4f4f4;
-  background-image: url(/img/960x0.jpg);
+  background-image: url(./img/960x0.jpg);
   background-size: cover;
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
