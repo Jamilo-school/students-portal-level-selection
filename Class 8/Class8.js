@@ -25,15 +25,19 @@ inputs.forEach((input) => {
 
 
 
+
 const learners = {
   ClassEight2023: [
-    {Name:"learner Not Selected"},
+    {Name:"learner Not yet Selected "},
     { 
       Name: "Edward Benard Abeka",
      AcademicAbility:"Above Average", 
       Gender: "Male", 
       AdmNo: "23/001", 
       Index: "39701064001",
+      Gnder: "Male", 
+      AdmNo: "23/001", 
+      Idex: "39701064001",
       UPI: "F2AJ5A1",  
       Character: "Excellent",  
       GraduationYear:"2023", 
