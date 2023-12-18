@@ -17,8 +17,6 @@ inputs.forEach((input) => {
   input.addEventListener("blur", blurFunc);
 });
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
   var reloadButton = document.getElementById('reload');
 
@@ -27,15 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
-
-
-
-
-
 const learners = {
   ClassEight2023: [
-    {Name:"learner Not yet Selected "},
+    // Learner objects
+
     { 
       Name: "Edward Benard Abeka",
       Gender: "Male", 
@@ -48,31 +41,37 @@ const learners = {
       fileURL2: "./Pdf/slip2023/ClementJoseph.pdf", 
       fileURL3: "./Pdf/slip2023/ClementJoseph.pdf",
       password: "ass"
-      },
+    },
     { 
-      Name: "Obadha Lex Apondi",
-     AcademicAbility:"Above Average", 
+      Name: "Amos",
       Gender: "Male", 
       AdmNo: "23/001", 
       Index: "39701064001",
-      UPI: "F2AJ5A1",  
-      Character: "Excellent",  
-      GraduationYear:"2023", 
-      Father:"SETH OTIENO ABEKA.", 
       Tel:"+254729246853", 
       Mother:"EVELYN AKINYI ABEKA", 
-      imageUrl: "./img/lex.jpg",
+      imageUrl: "./img/abeka.jpg",
       fileURL: "./Pdf/slip 2023/Abeka.pdf",
       fileURL2: "./Pdf/slip2023/ClementJoseph.pdf", 
       fileURL3: "./Pdf/slip2023/ClementJoseph.pdf",
       password: "ass"
-      },
-    // Other learner objects without passwords
+    },
+    { 
+      Name: "Amos",
+      Gender: "Male", 
+      AdmNo: "23/001", 
+      Index: "39701064001",
+      Tel:"+254729246853", 
+      Mother:"EVELYN AKINYI ABEKA", 
+      imageUrl: "./img/abeka.jpg",
+      fileURL: "./Pdf/slip 2023/Abeka.pdf",
+      fileURL2: "./Pdf/slip2023/ClementJoseph.pdf", 
+      fileURL3: "./Pdf/slip2023/ClementJoseph.pdf",
+      password: "ass"
+    },
+    // Add more learners here...
   ],
   GradeSeven: [
-    { Name: "", Age: "", grade: "", imageUrl: "" },
-    { Name: "Alice Johnson", age: 16, grade: "A+", imageUrl: "url/to/image4.jpg" },
-    // Other learner objects without passwords
+    // Learner objects
   ],
   // Other classes and learners
 };
@@ -91,17 +90,28 @@ function handleDownload(learner, fileKey) {
   window.location.href = learner[fileKey];
 }
 
+function countLearnersInClass(className) {
+  return learners[className].length;
+}
+
 function displayLearners() {
   const selectedClass = document.getElementById("classSelect").value;
   const learnerSelect = document.getElementById("learnerSelect");
+  const learnersInClass = learners[selectedClass]; // Get learners for the selected class
+
   learnerSelect.innerHTML = "";
 
-  learners[selectedClass].forEach((learner, index) => {
+  learnersInClass.forEach((learner, index) => {
     const option = document.createElement("option");
     option.value = index;
     option.textContent = learner.Name;
     learnerSelect.appendChild(option);
   });
+
+  // Display number of learners registered for the selected class
+  const numberOfLearners = countLearnersInClass(selectedClass);
+  const countDisplay = document.getElementById("learnerCount");
+  countDisplay.textContent = `Number of learners in ${selectedClass}: ${numberOfLearners}`;
 
   displayBiodata();
 }
@@ -112,53 +122,27 @@ function displayBiodata() {
   const biodataDiv = document.getElementById("learnerBiodata");
   const selectedLearner = learners[selectedClass][selectedLearnerIndex];
 
-  biodataDiv.innerHTML = "";
-
-  // Display image
-  const learnerImage = document.createElement("img");
-  learnerImage.src = selectedLearner.imageUrl;
-  learnerImage.alt = `${selectedLearner.Name}'s Image`;
-  biodataDiv.appendChild(learnerImage);
-
-  // Display learner details
+  let detailsHTML = "<div>";
   for (const [key, value] of Object.entries(selectedLearner)) {
-    if (key !== "imageUrl" && key !== "fileURL" && key !== "fileURL2" && key !== "fileURL3" && key !== "password") {
-      const p = document.createElement("p");
-      p.textContent = `${key}: ${value}`;
-      biodataDiv.appendChild(p);
+    if (
+      key !== "imageUrl" &&
+      key !== "fileURL" &&
+      key !== "fileURL2" &&
+      key !== "fileURL3" &&
+      key !== "password"
+    ) {
+      detailsHTML += `<p><strong>${key}:</strong> ${value}</p>`;
     }
   }
+  detailsHTML += "</div>";
 
-  // Display download links
-  if (selectedLearner.fileURL) {
-    const downloadLink = document.createElement("a");
-    downloadLink.href = "#";
-    downloadLink.textContent = "🫂Leaving Cert";
-    downloadLink.onclick = function () {
-      promptForDownloadPassword(selectedLearner);
-    };
-    biodataDiv.appendChild(downloadLink);
-
-    if (selectedLearner.fileURL2) {
-      const downloadLink2 = document.createElement("a");
-      downloadLink2.href = "#";
-      downloadLink2.textContent = "🚶‍♀️Online Slip";
-      downloadLink2.onclick = function () {
-        promptForDownloadPassword(selectedLearner, "fileURL2");
-      };
-      biodataDiv.appendChild(downloadLink2);
-    }
-
-    if (selectedLearner.fileURL3) {
-      const downloadLink3 = document.createElement("a");
-      downloadLink3.href = "#";
-      downloadLink3.textContent = "🤼Graduation Book";
-      downloadLink3.onclick = function () {
-        promptForDownloadPassword(selectedLearner, "fileURL3");
-      };
-      biodataDiv.appendChild(downloadLink3);
-    }
-  }
+  Swal.fire({
+    title: `${selectedLearner.Name}'s Biodata`,
+    html: `<img src="${selectedLearner.imageUrl}" alt="${selectedLearner.Name}'s Image" style="max-width: 100%">${detailsHTML}`,
+    showCancelButton: false,
+    showConfirmButton: false,
+    allowOutsideClick: true,
+  });
 }
 
 // Initial call to display learners
