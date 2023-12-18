@@ -21,12 +21,12 @@
       <div class="form">
         <div class="contact-info">
           <h3 class="title"><b>>> Office Of The Registrar </b></h3>
-          <div id="learnerBiodata" class="input"></div>
+          <div class="headtopstyleline" ></div>
           <p class="text">
            <b>>></b>Students BioData Portal
           </p>
 
-          <p id="learnerCount"></p>
+        
 
           <label for="classSelect" class="title" >Class 8:</label> 
           <select id="classSelect" onchange="displayLearners()" >
@@ -42,6 +42,7 @@
             <!-- Learner options will be populated based on the class selection -->
           </select>
            <br><br>
+           <p id="learnerCount"></p> 
           
           <h2  id="biodata" >Up Next</h2>
       
@@ -90,9 +91,9 @@
             <div id="learnerBiodata" class="input">
               <!-- Biodata will be displayed here -->
             </div>
+            <div id="learnerBiodata" class="input"></div>
             <h3 class="title" ><b>>> Report any Challenge </b></h3>
             <div class="input-container">
-              <input type="text" name="name" class="input" />
               <label for="">Name</label>
               <span>Name</span>
             </div>
@@ -119,8 +120,8 @@
     
       <img src="./img/sideway.png" alt="" id="reload">
     </div>
-
-    <script src="swal2.js"></script>
-    <!-- <script src="Class8.js"></script> -->
+   
+    
+        <script src="Class8.js"></script>
   </body>
 </html>

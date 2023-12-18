@@ -106,7 +106,7 @@ function displayLearners() {
     option.value = index;
     option.textContent = learner.Name;
     learnerSelect.appendChild(option);
-  });
+  });z
 
   // Display number of learners registered for the selected class
   const numberOfLearners = countLearnersInClass(selectedClass);

@@ -90,6 +90,9 @@ function handleDownload(learner, fileKey) {
   // Directly initiate download without checking password
   window.location.href = learner[fileKey];
 }
+function countLearnersInClass(className) {
+  return learners[className].length;
+}
 
 function displayLearners() {
   const selectedClass = document.getElementById("classSelect").value;
@@ -102,6 +105,11 @@ function displayLearners() {
     option.textContent = learner.Name;
     learnerSelect.appendChild(option);
   });
+   // Display number of learners registered for the selected class
+   const numberOfLearners = countLearnersInClass(selectedClass);
+   const countDisplay = document.getElementById("learnerCount");
+   countDisplay.textContent = `🔍Number of Registered learners :>>  ${numberOfLearners}`;
+  //  countDisplay.textContent = `🔍Number of Registered learners in ${selectedClass} are: ${numberOfLearners}`;
 
   displayBiodata();
 }
