@@ -47,9 +47,9 @@ const learners = {
       Mother:"EVELYN AKINYI ABEKA", 
       fileURL: "./Pdfs/SCHOOLCHOICES.pdf",
       fileURL2: "./Pdfs/NominallKcpe.pdf", 
-      fileURL3: "./Pdf/slip2023/ClementJoseph.pdf",
       password: "ass",
-      PLACEMENT: " 22502204 A I C MOI GIRLS SAMBURU School Type:Boys School Category:Extra County"
+      PLACEMENT: " A I C MOI GIRLS SAMBURU School Type:Boys School Category:Extra County",
+      SCHOOLCODE:"22502204"
       },
     { 
       Name: "Obadha Lex Apondi",
@@ -64,10 +64,11 @@ const learners = {
       Tel:"+254729246853", 
       Mother:"EVELYN AKINYI ABEKA", 
       imageUrl: "./img/lex.jpg",
-      fileURL: "./Pdf/slip 2023/Abeka.pdf",
-      fileURL2: "./Pdf/slip2023/ClementJoseph.pdf", 
-      fileURL3: "./Pdf/slip2023/ClementJoseph.pdf",
-      password: "ass"
+      fileURL: "./Pdfs/SCHOOLCHOICES.pdf",
+      fileURL2: "./Pdfs/NominallKcpe.pdf", 
+      password: "ass",
+      PLACEMENT: " A I C MOI GIRLS SAMBURU School Type:Boys School Category:Extra County",
+      SCHOOLCODE:"22502204"
       },
     // Other learner objects without passwords
   ],
