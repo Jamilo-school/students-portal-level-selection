@@ -355,13 +355,15 @@ overflow: auto;
  
 }
 
+
 #biodata{
-  background: linear-gradient(45deg,#390c39,#6326c0,#fd256a,#181ecd);
+  /* background: linear-gradient(45deg,#390c39,#6326c0,#fd256a,#181ecd); */
+  background: linear-gradient(45deg,#0de5da,#5b0e43,#c2b41b,#000000);
   -webkit-background-clip: text;
   background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    font-size: 20px;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 
@@ -391,6 +393,11 @@ overflow: auto;
 #send{
   width: auto;
   float: right;
+  background: linear-gradient(45deg,#390c39,#6326c0,#fd256a,#181ecd);
+  -webkit-background-clip: text;
+  background-clip: text;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+    -webkit-text-fill-color: transparent;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
   
 }
 #send:active{
@@ -558,10 +565,10 @@ width: 60px;
     background-color: #fff;
     color: #4a4141;
     font-weight: bold;
-    margin: 10px;
+    margin-bottom: 10px;
     border-radius: 10px;
     border: none;
-    padding: 10px 10px 10px 10px;
+    padding: 5px 5px 5px 5px;
     transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
  
 }
@@ -607,6 +614,7 @@ width: 60px;
 .contact-info {
   padding: 2.3rem 2.2rem;
   position: relative;
+ 
 
 }
 
@@ -709,6 +717,9 @@ width: 60px;
   transform: translate(181%, 11%);
   opacity: 0.2;
 }
+.hidebigscreen{
+  display: none;
+}
 
 @media (max-width: 1050px) {
   #learnerBiodata {
@@ -722,6 +733,20 @@ width: 60px;
 @media (max-width: 850px) {
   .form {
     grid-template-columns: 1fr;
+  }
+  .hidebigscreen{
+    display: block;
+  }
+
+  .hidesmall{
+    display: none;
+  }
+  .contact-info {
+    padding-bottom: 0px;
+  
+  }
+  form{
+    padding-top: 0px;
   }
   #learnerBiodata {
     display: grid;
