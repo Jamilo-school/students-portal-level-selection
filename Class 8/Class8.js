@@ -35,19 +35,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const learners = {
   ClassEight2023: [
-    {Name:"learner Not yet Selected "},
+    // {Name:"learner Not yet Selected "},
     { 
+      imageUrl: "./img/abeka.jpg",
       Name: "Edward Benard Abeka",
       Gender: "Male", 
       AdmNo: "23/001", 
       Index: "39701064001",
+      Father:"SETH OTIENO ABEKA.",
       Tel:"+254729246853", 
       Mother:"EVELYN AKINYI ABEKA", 
-      imageUrl: "./img/abeka.jpg",
-      fileURL: "./Pdf/slip 2023/Abeka.pdf",
-      fileURL2: "./Pdf/slip2023/ClementJoseph.pdf", 
+      fileURL: "./Pdfs/SCHOOLCHOICES.pdf",
+      fileURL2: "./Pdfs/NominallKcpe.pdf", 
       fileURL3: "./Pdf/slip2023/ClementJoseph.pdf",
-      password: "ass"
+      password: "ass",
+      PLACEMENT: " 22502204 A I C MOI GIRLS SAMBURU School Type:Boys School Category:Extra County"
       },
     { 
       Name: "Obadha Lex Apondi",
@@ -141,7 +143,7 @@ function displayBiodata() {
   if (selectedLearner.fileURL) {
     const downloadLink = document.createElement("a");
     downloadLink.href = "#";
-    downloadLink.textContent = "🫂Leaving Cert";
+    downloadLink.textContent = "🫂School Choices";
     downloadLink.onclick = function () {
       promptForDownloadPassword(selectedLearner);
     };
@@ -150,7 +152,7 @@ function displayBiodata() {
     if (selectedLearner.fileURL2) {
       const downloadLink2 = document.createElement("a");
       downloadLink2.href = "#";
-      downloadLink2.textContent = "🚶‍♀️Online Slip";
+      downloadLink2.textContent = "🚶‍♀️Learner Selections ";
       downloadLink2.onclick = function () {
         promptForDownloadPassword(selectedLearner, "fileURL2");
       };
@@ -160,7 +162,7 @@ function displayBiodata() {
     if (selectedLearner.fileURL3) {
       const downloadLink3 = document.createElement("a");
       downloadLink3.href = "#";
-      downloadLink3.textContent = "🤼Graduation Book";
+      downloadLink3.textContent = "🤼Placement";
       downloadLink3.onclick = function () {
         promptForDownloadPassword(selectedLearner, "fileURL3");
       };
