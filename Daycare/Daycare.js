@@ -1,31 +1,59 @@
+const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var reloadButton = document.getElementById('reload');
+
+  reloadButton.addEventListener('click', function() {
+    location.reload();
+  });
+});
+
+
+
+
+
+
+
 const learners = {
   ClassEight2023: [
-    { Name: "learner not selected", AdmNo: "learner not selected", Index: "learner not selected", UPI: "learner not selected",  imageUrl:  "selection", Status: "learner not selected", fileURL: "./Pdf/slip2023/ClementJoseph.pdf", fileURL2: "./Pdf/slip2023/ClementJoseph.pdf", fileURL3: "./Pdf/slip2023/ClementJoseph.pdf", password: "ass" },
-   
+    // {Name:"learner Not yet Selected "},
     { 
-     Name: "Edward Benard Abeka",
-    AcademicAbility:"Above Average", 
-     Gender: "Male", 
-     AdmNo: "23/001", 
-     Index: "39701064001",
-     UPI: "F2AJ5A1",  
-     Character: "Excellent",  
-     GraduationYear:"2023", 
-     Father:"SETH OTIENO ABEKA.", 
-     Tel:"+254-729-246-853", 
-     Mother:"EVELYN AKINYI ABEKA", 
-     imageUrl: "./img/abeka.jpg",
-     fileURL: "./Pdf/slip 2023/Abeka.pdf",
-     fileURL2: "./Pdf/slip2023/ClementJoseph.pdf", 
-     fileURL3: "./Pdf/slip2023/ClementJoseph.pdf",
-     password: "ass"
-     },
-
-
-
-     {
-      Name:"iis",
-      AcademicAbility:"Above Average", 
+      imageUrl: "./img/abeka.jpg",
+      Name: "Edward Benard Abeka",
+      Gender: "Male", 
+      AdmNo: "23/001", 
+      Index: "39701064001",
+      Father:"SETH OTIENO ABEKA.",
+      Tel:"+254729246853", 
+      Mother:"EVELYN AKINYI ABEKA", 
+      fileURL: "./Pdfs/SCHOOLCHOICES.pdf",
+      fileURL2: "./Pdfs/NominallKcpe.pdf", 
+      password: "ass",
+      PLACEMENT: " A I C MOI GIRLS SAMBURU School Type:Boys School Category:Extra County",
+      SCHOOLCODE:"22502204"
+      },
+    { 
+      Name: "Obadha Lex Apondi",
+     AcademicAbility:"Above Average", 
       Gender: "Male", 
       AdmNo: "23/001", 
       Index: "39701064001",
@@ -33,62 +61,40 @@ const learners = {
       Character: "Excellent",  
       GraduationYear:"2023", 
       Father:"SETH OTIENO ABEKA.", 
-      Tel:"+254-729-246-853", 
+      Tel:"+254729246853", 
       Mother:"EVELYN AKINYI ABEKA", 
-      imageUrl: "./img/abeka.jpg",
-      fileURL: "./Pdf/slip 2023/Abeka.pdf",
-      fileURL2: "./Pdf/slip2023/ClementJoseph.pdf", 
-      fileURL3: "./Pdf/slip2023/ClementJoseph.pdf",
-     }
- 
-     // Add more learners for Class Eight 2023
+      imageUrl: "./img/lex.jpg",
+      fileURL: "./Pdfs/SCHOOLCHOICES.pdf",
+      fileURL2: "./Pdfs/NominallKcpe.pdf", 
+      password: "ass",
+      PLACEMENT: " A I C MOI GIRLS SAMBURU School Type:Boys School Category:Extra County",
+      SCHOOLCODE:"22502204"
+      },
+    // Other learner objects without passwords
   ],
   GradeSeven: [
-    { Name: "", Age: "", grade: "", imageUrl: "", password: "" },
-    { Name: "Alice Johnson", age: 16, grade: "A+", imageUrl: "url/to/image4.jpg", password: "learner3Pass" },
-    { Name: "Edward Benard Abeka", Index: 39701064001, Year: "2023", imageUrl: "url/to/image5.jpg", fileURL: "./Pdf/slip2023/ClementJoseph.pdf", password: "learner4Pass" },
-    // Add more learners for Grade Five
+    { Name: "", Age: "", grade: "", imageUrl: "" },
+    { Name: "Alice Johnson", age: 16, grade: "A+", imageUrl: "url/to/image4.jpg" },
+    // Other learner objects without passwords
   ],
-  // Add more classes with learners as needed
+  // Other classes and learners
 };
 
 const adminPassword = "admin";
 let enteredPassword = ""; // Variable to store the entered password
 
 function promptForDownloadPassword(learner, fileKey = "fileURL") {
-  if (enteredPassword === "") {
-    Swal.fire({
-      title: "Enter Download Password:",
-      input: "password",
-      inputAttributes: {
-        autocapitalize: "off"
-      },
-      showCancelButton: true,
-      confirmButtonText: "Submit",
-      showLoaderOnConfirm: true,
-      preConfirm: (password) => {
-        return password;
-      }
-    }).then((result) => {
-      if (result.isConfirmed) {
-        enteredPassword = result.value;
-        handleDownload(learner, fileKey);
-      }
-    });
-  } else {
-    handleDownload(learner, fileKey);
-  }
+  handleDownload(learner, fileKey);
 }
 
 function handleDownload(learner, fileKey) {
   const password = enteredPassword;
 
-  if (password === learner.password || password === adminPassword) {
-    window.location.href = learner[fileKey];
-  } else {
-     window.location.href = learner[fileKey];
-    Swal.fire("Access Denied", "Incorrect password", "error");
-  }
+  // Directly initiate download without checking password
+  window.location.href = learner[fileKey];
+}
+function countLearnersInClass(className) {
+  return learners[className].length;
 }
 
 function displayLearners() {
@@ -102,6 +108,11 @@ function displayLearners() {
     option.textContent = learner.Name;
     learnerSelect.appendChild(option);
   });
+   // Display number of learners registered for the selected class
+   const numberOfLearners = countLearnersInClass(selectedClass);
+   const countDisplay = document.getElementById("learnerCount");
+   countDisplay.textContent = `🔍Number of Registered learners :>>  ${numberOfLearners}`;
+  //  countDisplay.textContent = `🔍Number of Registered learners in ${selectedClass} are: ${numberOfLearners}`;
 
   displayBiodata();
 }
@@ -133,7 +144,7 @@ function displayBiodata() {
   if (selectedLearner.fileURL) {
     const downloadLink = document.createElement("a");
     downloadLink.href = "#";
-    downloadLink.textContent = "🫂Leaving Cert";
+    downloadLink.textContent = "🫂School Choices";
     downloadLink.onclick = function () {
       promptForDownloadPassword(selectedLearner);
     };
@@ -142,7 +153,7 @@ function displayBiodata() {
     if (selectedLearner.fileURL2) {
       const downloadLink2 = document.createElement("a");
       downloadLink2.href = "#";
-      downloadLink2.textContent = "🚶‍♀️Online Slip";
+      downloadLink2.textContent = "🚶‍♀️Learner Selections ";
       downloadLink2.onclick = function () {
         promptForDownloadPassword(selectedLearner, "fileURL2");
       };
@@ -152,7 +163,7 @@ function displayBiodata() {
     if (selectedLearner.fileURL3) {
       const downloadLink3 = document.createElement("a");
       downloadLink3.href = "#";
-      downloadLink3.textContent = "🤼Graduation Book";
+      downloadLink3.textContent = "🤼Placement";
       downloadLink3.onclick = function () {
         promptForDownloadPassword(selectedLearner, "fileURL3");
       };
