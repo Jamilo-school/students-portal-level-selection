@@ -457,6 +457,12 @@ width: 60px;
     animation: sunshines 1s infinite;
     color: red;
   }
+  option{
+    background-color: rgb(3, 3, 27);
+    color: lavender;
+  }
+  
+
 
 
 #learnerBiodata.input{

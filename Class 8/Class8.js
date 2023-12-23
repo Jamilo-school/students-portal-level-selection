@@ -38,7 +38,7 @@ const learners = {
     {Name:"learner Not yet Selected "},
     { 
       imageUrl: "./img/abeka.jpg",
-      Name: "EDWARD BENARD ABEKA ",
+      Name: "1. EDWARD BENARD ABEKA ",
       Gender: "Male", 
       Academics:"Excellent", 
       AdmNo: "23/001", 
@@ -60,7 +60,7 @@ const learners = {
       },
     { 
       imageUrl: "./img/lex.jpg",
-      Name: " OBADHA LEX APONDI  ",
+      Name: "2. OBADHA LEX APONDI  ",
       Gender: "Male", 
       Academis:"Excellent", 
       AdmNo: "23/002", 
@@ -84,7 +84,7 @@ const learners = {
   
     { 
       imageUrl: "./img/clement.jpg",
-      Name: "CLEMENT JOSEPH AWUOR   ",
+      Name: "3. CLEMENT JOSEPH AWUOR   ",
       Gender: "Male", 
       Academics:"Excellent", 
       AdmNo: "23/003", 
@@ -106,7 +106,7 @@ const learners = {
       },
     { 
       imageUrl: "./img/james.jpg",
-      Name: "JASON JAMES ODHIAMBO",
+      Name: "4. JASON JAMES ODHIAMBO",
       Gender: "Male", 
       Academics:"Excellent", 
       AdmNo: "23/004", 
@@ -130,7 +130,7 @@ const learners = {
       },
     { 
       imageUrl: "./img/len.jpg",
-      Name: "HONGO LEN ODHIAMBO",
+      Name: "5. HONGO LEN ODHIAMBO",
       Gender: "Male", 
       Academics:"Excellent", 
       AdmNo: "23/005", 
@@ -153,7 +153,7 @@ const learners = {
       },
     { 
       imageUrl: "./img/BERRYL.jpg",
-      Name: " OCHOLA BERRYL ATIENO ",
+      Name: " 6. OCHOLA BERRYL ATIENO ",
       Gender: "Female", 
       Academics:"Good", 
       AdmNo: "23/006", 
@@ -172,7 +172,7 @@ const learners = {
       },
     { 
       imageUrl: "./img/nuvia.jpg",
-      Name: " ONYANGO NUVIAH ACHIENG ",
+      Name: " 7. ONYANGO NUVIAH ACHIENG ",
       Gender: "Female", 
       Academics:"Average", 
       AdmNo: "23/007", 
@@ -191,7 +191,7 @@ const learners = {
       },
     { 
       imageUrl: "./img/vivian.jpg",
-      Name: " AUMA VIVIAN ADHIAMBO  ",
+      Name: " 9. AUMA VIVIAN ADHIAMBO  ",
       Gender: "Female", 
       Academics:"Average", 
       AdmNo: "23/008", 
@@ -212,7 +212,7 @@ const learners = {
       },
     { 
       imageUrl: "./img/agiza.jpg",
-      Name: " AGOSWA RASTARICIA AGIZA  ",
+      Name: "10. AGOSWA RASTARICIA AGIZA  ",
       Gender: "Female", 
       Academics:"Average", 
       AdmNo: "23/009", 
@@ -230,7 +230,7 @@ const learners = {
       },
     { 
       imageUrl: "./img/john.jpg",
-      Name: "OTIENO JOHN OKOTH   ",
+      Name: "11. OTIENO JOHN OKOTH   ",
       Gender: "Male", 
       Academics:"Average", 
       AdmNo: "23/0010", 
@@ -250,7 +250,7 @@ const learners = {
 
     {
       imageUrl: "./img/stephanie.jpg",
-      Name: " OCHIENG STEPHANY AKINYI   ",
+      Name: "12.  OCHIENG STEPHANY AKINYI   ",
       Gender: "Female", 
       Academics:"Average", 
       AdmNo: "23/0011", 
@@ -273,7 +273,7 @@ const learners = {
       },
     {
       imageUrl: "./img/randy.jpg",
-      Name: " OTIENO RANDY FRANKLINE",
+      Name: " 13. OTIENO RANDY FRANKLINE",
       Gender: "Female", 
       Academics:"Good", 
       AdmNo: "23/0012", 
