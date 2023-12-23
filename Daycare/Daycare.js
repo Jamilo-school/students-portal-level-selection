@@ -35,21 +35,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const learners = {
   ClassEight2023: [
-    // {Name:"learner Not yet Selected "},
+    {Name:"learner Not yet Selected "},
     { 
       imageUrl: "./img/abeka.jpg",
       Name: "Edward Benard Abeka",
-      Gender: "Male", 
-      AdmNo: "23/001", 
-      Index: "39701064001",
-      Father:"SETH OTIENO ABEKA.",
-      Tel:"+254729246853", 
-      Mother:"EVELYN AKINYI ABEKA", 
-      fileURL: "./Pdfs/SCHOOLCHOICES.pdf",
-      fileURL2: "./Pdfs/NominallKcpe.pdf", 
+      Gender: "", 
+      DOB:"",
+      UPINO:"",
+      AdmNo: "", 
+      Father:"",
+      Tel:"", 
+      Mother:"", 
+      PhoneNo:"", 
+      // fileURL: "./Pdfs/SCHOOLCHOICES.pdf",
+      // fileURL2: "./Pdfs/NominallKcpe.pdf", 
       password: "ass",
-      PLACEMENT: " A I C MOI GIRLS SAMBURU School Type:Boys School Category:Extra County",
-      SCHOOLCODE:"22502204"
+     
       },
     { 
       Name: "Obadha Lex Apondi",
@@ -94,7 +95,7 @@ function handleDownload(learner, fileKey) {
   window.location.href = learner[fileKey];
 }
 function countLearnersInClass(className) {
-  return learners[className].length;
+  return learners[className].length-1;
 }
 
 function displayLearners() {

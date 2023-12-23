@@ -371,6 +371,7 @@ overflow: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
+
  
   
 }
@@ -431,8 +432,8 @@ overflow: auto;
 z-index: 100000000;
 top: 70px;
 width: 60px;
- left: 1px;
- rotate:180deg;
+ right: 1px;
+ rotate:0deg;
   list-style: none;
   text-decoration: none;
   color: #656262;
@@ -447,7 +448,7 @@ width: 60px;
 
   text-align: center;
   border-radius: 25px;
-  animation: sunshines 1s linear;
+  animation: sunshines 3s infinite;
 
   transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
   }
@@ -523,8 +524,8 @@ width: 60px;
 #learnerBiodata.input img:hover{
   transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
   backdrop-filter: blur(400px);
-
-  transform: scale(1.5);
+ transform: scale(1.5);
+ 
  
  }
   
@@ -736,6 +737,7 @@ width: 60px;
   }
   .hidebigscreen{
     display: block;
+    padding: 2rem;
   }
 
   .hidesmall{

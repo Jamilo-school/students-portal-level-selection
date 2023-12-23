@@ -5,6 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+input{
+  cursor:URL(./img/sideway.png)auto ;
+}
 
 body,
 input,
@@ -85,15 +88,11 @@ div:where(.swal2-container) div:where(.swal2-popup) {
   height: 0.3125em;
   border-radius: 0.125em;
   background-color: #e6eeea;
-  
-
 }
 
-
-  .swal2-icon.swal2-error {
+.swal2-icon.swal2-error {
     border-color: gray;
     backdrop-filter: blur(5px);
-   
   }
   button.swal2-confirm.swal2-styled,.swal2-cancel.swal2-styled {
     border:1px solid gray ;
@@ -106,9 +105,7 @@ div:where(.swal2-container) div:where(.swal2-popup) {
     font-family: Georgia, 'Times New Roman', Times, serif;
     outline: none;
    -webkit-box-shadow: -3px -3px 5px white, 3px 3px 5px rgba(209, 209, 209, 0.705);
-            box-shadow: -3px -3px 5px white, 3px 3px 5px rgba(209, 209, 209, 0.705);
-  
-  
+    box-shadow: -3px -3px 5px white, 3px 3px 5px rgba(209, 209, 209, 0.705);
     
   }
  
@@ -212,8 +209,6 @@ h6{
   top: 50px;
   left: -13px;
 }
-
-
 
 form {
   padding: 2.3rem 2.2rem;
@@ -470,8 +465,6 @@ width: 60px;
     outline: none;
     background-color: #fff;
     color: #4a4141;
-    font-weight: bold;
-    margin: 10px;
     border-radius: 10px;
     border: none;
     padding: 10px 10px 10px 10px;
@@ -614,6 +607,7 @@ width: 60px;
 .contact-info {
   padding: 2.3rem 2.2rem;
   position: relative;
+  padding-bottom: 0px;
  
 
 }

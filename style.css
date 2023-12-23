@@ -10,6 +10,7 @@ body,
 input,
 textarea {
   font-family: "Poppins", sans-serif;
+  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
 /* My addition to desktop screen */
 h6,p{
@@ -162,6 +163,7 @@ textarea.input {
   margin: 2px;
   font-weight: bold;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
 
 .btn:hover {
@@ -171,7 +173,12 @@ textarea.input {
   background: linear-gradient(45deg,#cbd1d1,#a83a85,#581bc2,#000000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-    border: 4px ;
+  border: 6px solid #fafafa;
+  transform: scale(0.83);
+   
+}
+.btn:active{
+  transform: scale(1.03);
 }
 
 .input-container span {
@@ -242,6 +249,7 @@ textarea.input {
   margin: 0.7rem 0;
   align-items: center;
   font-size: 0.95rem;
+  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
 
 .icon {
@@ -321,6 +329,8 @@ textarea.input {
   opacity: 0.2;
 }
 
+
+
 @media (max-width: 850px) {
   .form {
     grid-template-columns: 1fr;
@@ -330,14 +340,20 @@ textarea.input {
   #displayforlongclassnames{
     grid-template-columns: 1fr;
   }
-
+form{
+  padding-top: 0px;
+}
+.contact-info{
+  padding-bottom: 15px;
+}
 
   
   .information {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
     margin: 0.7rem 0;
     align-items: left;
+    transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
 
    
   }
@@ -380,9 +396,25 @@ textarea.input {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 579px) {
+  .information {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+   
+
+   
+  }
+}
+@media (max-width: 430px) {
   .container {
     padding: 1.5rem;
+  }
+  .information {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  
+
+   
   }
 
   .contact-info:before {
@@ -394,9 +426,11 @@ textarea.input {
     display: none;
   }
 
-  form,
-  .contact-info {
-    padding: 1.7rem 1.6rem;
+  form{
+    padding-top: 0px;
+  }
+  .contact-info{
+    padding-bottom: 15px;
   }
 
   .text,
