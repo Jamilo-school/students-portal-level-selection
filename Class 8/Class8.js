@@ -307,6 +307,8 @@ const learners = {
   // Other classes and learners
 };
 
+
+
 const adminPassword = "admin";
 let enteredPassword = ""; // Variable to store the entered password
 
