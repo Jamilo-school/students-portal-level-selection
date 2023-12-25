@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   reloadButton.addEventListener('click', function() {
     location.reload();
+    
   });
 });
 
@@ -35,7 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const learners = {
   ClassEight2023: [
-    {Name:"learner Not yet Selected "},
+    {Name:"learner Not yet Selected ",   
+     imageUrl: "./img/schoologo.png",
+    },
     { 
       imageUrl: "./img/abeka.jpg",
       Name: "1. EDWARD BENARD ABEKA ",
@@ -62,7 +65,7 @@ const learners = {
       imageUrl: "./img/lex.jpg",
       Name: "2. OBADHA LEX APONDI  ",
       Gender: "Male", 
-      Academis:"Excellent", 
+      Academics:"Excellent", 
       AdmNo: "23/002", 
       Index: "39701064002",
       MedicalCondition:"Low vision",
@@ -191,7 +194,7 @@ const learners = {
       },
     { 
       imageUrl: "./img/vivian.jpg",
-      Name: " 9. AUMA VIVIAN ADHIAMBO  ",
+      Name: " 8. AUMA VIVIAN ADHIAMBO  ",
       Gender: "Female", 
       Academics:"Average", 
       AdmNo: "23/008", 
@@ -212,7 +215,7 @@ const learners = {
       },
     { 
       imageUrl: "./img/agiza.jpg",
-      Name: "10. AGOSWA RASTARICIA AGIZA  ",
+      Name: "9. AGOSWA RASTARICIA AGIZA  ",
       Gender: "Female", 
       Academics:"Average", 
       AdmNo: "23/009", 
@@ -226,11 +229,11 @@ const learners = {
       LeavingCertificate: "./Pdfs/leaving/Agiza.pdf", 
       OnlineResultSlip: "./Pdfs/Slip/Agiza's Slip.pdf", 
       Placement:"./Pdfs/Placements 2023.pdf", 
-      CallingLetter:"#",
+      CallingLetter:"./Pdfs/Slip/To whom it may concern FOR AGIZA.pdf",
       },
     { 
       imageUrl: "./img/john.jpg",
-      Name: "11. OTIENO JOHN OKOTH   ",
+      Name: "10. OTIENO JOHN OKOTH   ",
       Gender: "Male", 
       Academics:"Average", 
       AdmNo: "23/0010", 
@@ -250,7 +253,7 @@ const learners = {
 
     {
       imageUrl: "./img/stephanie.jpg",
-      Name: "12.  OCHIENG STEPHANY AKINYI   ",
+      Name: "11.  OCHIENG STEPHANY AKINYI   ",
       Gender: "Female", 
       Academics:"Average", 
       AdmNo: "23/0011", 
@@ -273,7 +276,7 @@ const learners = {
       },
     {
       imageUrl: "./img/randy.jpg",
-      Name: " 13. OTIENO RANDY FRANKLINE",
+      Name: " 12. OTIENO RANDY FRANKLINE",
       Gender: "Female", 
       Academics:"Good", 
       AdmNo: "23/0012", 
@@ -281,10 +284,6 @@ const learners = {
       MedicalCondition:"N/A",
       UPI:"AY2YYP",
       GratuationYear:"2023",
-      Father:"RICHARD OCHIENG",
-      Contact:" +254-17805584",
-      Mother:"MARY GORRETY OWIRO",
-      Contact: "+254727032249",
      SchoolChoices: "./Pdfs/SCHOOLCHOICES.pdf",
      LearnerSelections: "./Pdfs/NominallKcpe.pdf",
       LeavingCertificate: "./Pdfs/leaving/stephanie.pdf", 
@@ -323,7 +322,7 @@ function handleDownload(learner, fileKey) {
   window.location.href = learner[fileKey];
 }
 function countLearnersInClass(className) {
-  return learners[className].length;
+  return learners[className].length-1;
 }
 
 function displayLearners() {
@@ -433,6 +432,8 @@ function displayBiodata() {
       downloadLink6.textContent = "📩Calling Letter";
       downloadLink6.onclick = function () {
         promptForDownloadPassword(selectedLearner, "CallingLetter");
+        alert("Pending Update");
+        
       };
       biodataDiv.appendChild(downloadLink6);
     }

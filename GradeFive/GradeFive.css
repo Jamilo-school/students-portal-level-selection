@@ -10,6 +10,7 @@ body,
 input,
 textarea {
   font-family: "Poppins", sans-serif;
+  cursor: url()auto;
 }
 
 .swal2-popup{
@@ -50,6 +51,7 @@ h2#swal2-title.swal2-title{
   transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
 
 }
+
 
 
 div#swal2-html-container.swal2-html-container {
@@ -653,9 +655,10 @@ width: 60px;
 }
 
 .information {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
   color: #555;
-  margin: 0.7rem 0;
+  margin: 0.7rem 0.6rem;
   align-items: center;
   font-size: 0.95rem;
 
