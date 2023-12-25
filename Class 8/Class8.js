@@ -132,7 +132,7 @@ const learners = {
      
       },
     { 
-      imageUrl: "./img/len.jpg",
+      imageUrl:"./img/Len.jpg",
       Name: "5. HONGO LEN ODHIAMBO",
       Gender: "Male", 
       Academics:"Excellent", 
@@ -232,7 +232,7 @@ const learners = {
       CallingLetter:"./Pdfs/Slip/To whom it may concern FOR AGIZA.pdf",
       },
     { 
-      imageUrl: "./img/john.jpg",
+      imageUrl:"./img/john.jpg",
       Name: "10. OTIENO JOHN OKOTH   ",
       Gender: "Male", 
       Academics:"Average", 
@@ -252,7 +252,7 @@ const learners = {
       },
 
     {
-      imageUrl: "./img/stephanie.jpg",
+      imageUrl:"./img/Stephanie.jpg",
       Name: "11.  OCHIENG STEPHANY AKINYI   ",
       Gender: "Female", 
       Academics:"Average", 
