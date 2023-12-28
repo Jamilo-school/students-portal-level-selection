@@ -308,7 +308,8 @@ const learners = {
 
 
 
-
+const adminPassword = "admin";
+let enteredPassword = ""; // Variable to store the entered password
 
 function promptForDownloadPassword(learner, fileKey = "SchoolChoices") {
   handleDownload(learner, fileKey);
@@ -322,10 +323,8 @@ function handleDownload(learner, fileKey) {
   // Create a temporary anchor element to trigger the download
   const link = document.createElement("a");
   link.href = url;
-  link.setAttribute("download","");
+  link.setAttribute("download", "");
   link.click();
-  //link.removeChild('')
-  link=('_blank')
 
 
 // ... (rest of your code remains unchanged)
@@ -374,7 +373,7 @@ function displayBiodata() {
 
   // Display learner details
   for (const [key, value] of Object.entries(selectedLearner)) {
-    if(key !== "imageUrl" 
+    if (key !== "imageUrl" 
     && key !== "SchoolChoices"
     && key !== "LearnerSelections" 
     && key !== "LeavingCertificate"
@@ -401,25 +400,20 @@ function displayBiodata() {
     
   
 
-    if (selectedLearner.LearnerSelections) {
-      const downloadLink2 = document.createElement("a");
-      downloadLink2.href = "#";
-      downloadLink2.textContent = "🚶‍♀️Learner Selections ";
-      downloadLink2.onclick = function () {
-        promptForDownloadPassword(selectedLearner, "LearnerSelections");
-      
-      };
-      biodataDiv.appendChild(downloadLink2);
+    if (selectedLearner.SchoolChoices) {
+        const downloadLink = document.createElement("a");
+        downloadLink.textContent = "🫂 School Choices";
+        downloadLink.setAttribute("download", "SchoolChoices('')");
+        downloadLink.href = selectedLearner.SchoolChoices; // Use the URL from the data array
+        biodataDiv.appendChild(downloadLink);
     }
 
-    if (selectedLearner.LeavingCertificate) {
-      const downloadLink3 = document.createElement("a");
-      downloadLink3.href = "#";
-      downloadLink3.textContent = "🤼leaving Certificate";
-      downloadLink3.onclick = function () {
-        promptForDownloadPassword(selectedLearner, "LeavingCertificate");
-      };
-      biodataDiv.appendChild(downloadLink3);
+    if (selectedLearner.LearnerSelections) {
+        const downloadLink2 = document.createElement("a");
+        downloadLink2.textContent = "🚶‍♀️ Learner Selections";
+        downloadLink2.setAttribute("download", "LearnerSelections.pdf");
+        downloadLink2.href = selectedLearner.LearnerSelections;
+        biodataDiv.appendChild(downloadLink2);
     }
     if (selectedLearner.OnlineResultSlip) {
       const downloadLink4 = document.createElement("a");
