@@ -314,26 +314,31 @@ function promptForDownloadPassword(learner, fileKey = "SchoolChoices") {
   handleDownload(learner, fileKey);
 }
 
-// ... (previous code)
-
 function handleDownload(learner, fileKey) {
   const url = learner[fileKey];
 
-  // Create a temporary anchor element to trigger the download
-  const link = document.createElement("a");
+  // Open a new window
+  const newWindow = window.open();
+
+  // Create a temporary anchor element in the new window to trigger the download
+  const link = newWindow.document.createElement("a");
   link.href = url;
-  link.setAttribute("download","");
+  link.setAttribute("download", "");
+  newWindow.document.body.appendChild(link); // Append the link to the new window's body
   link.click();
-  //link.removeChild('')
-  link=('_blank')
 
 
-// ... (rest of your code remains unchanged)
+  // Close the new window after a short delay (e.g., 500 milliseconds)
+  setTimeout(() => {
+    newWindow.close();
+    
+  }, 100);
+}
 
 
   // Directly initiate download without checking password
   window.location.href = learner[fileKey];
-}
+
 function countLearnersInClass(className) {
   return learners[className].length-1;
 }
