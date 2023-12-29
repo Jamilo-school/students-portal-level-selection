@@ -332,7 +332,7 @@ function handleDownload(learner, fileKey) {
   setTimeout(() => {
     newWindow.close();
     
-  }, 100);
+  }, 500);
 }
 
 

@@ -35,16 +35,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 const learners = {
-  ClassEight2023: [
+
+  // GradeSix2024: [
+  //   {Name:"No Registered Learner ",   
+  //   imageUrl: "./img/schoologo.png",
+  //  },
+
+
+  //   // Other learner objects without passwords
+  // ],
+
+
+  GradeSix2023: [
     {Name:"learner Not yet Selected ",   
-     imageUrl: "./img/schoologo.png",
+     imageUrl: "./img/schoologo.jpg",
     },
     {
-    imageUrl: "./img/randy.jpg",
-    Name: " 12. ",
-    Gender: "", 
-    Academics:"", 
-    AdmNo: "", 
+    imageUrl: "./img/Remy.jpg",
+    Name: " ADAMS ,REMY OTIENO",
+    Gender: "Male",  
+    EntryNo: "", 
   
     MedicalCondition:"N/A",
     UPI:"",
@@ -58,11 +68,7 @@ const learners = {
     },
     // Other learner objects without passwords
   ],
-Leaders: [
-    { Title:"",Name: "", Age: "", grade: "", imageUrl: "" },
-    { Name: "Alice Johnson", age: 16, grade: "A+", imageUrl: "url/to/image4.jpg" },
-    // Other learner objects without passwords
-  ],
+
   // Other classes and learners
 };
 
